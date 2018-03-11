@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 
-joincode = "828520"                   #Join code for Quizlet.live
+joincode = "157604"                   #Join code for Quizlet.live
 name = "Account Name"                       #Name for Quizlet.live
 initial = "_"                    #In case of duplicates, Quizlet may ask for an initial
 
@@ -27,9 +27,10 @@ except:
 
 while(True):
     try:
-        question = driver.find_element_by_class_name('StudentPrompt-inner').text.encode('utf-8')
+        question = driver.find_element_by_class_name('StudentPrompt-inner').text.encode('utf-8')        #Question
         print(question)
-        possible_answer = driver.find_element_by_class_name('StudentTermGroup-terms').text.encode('utf-8')
-        print(answer)
+
+        possible_answer = driver.find_element_by_class_name('StudentTermGroup-terms').text.encode('utf-8')  #All possible answers
+        print(possible_answer)
     except:
         pass
