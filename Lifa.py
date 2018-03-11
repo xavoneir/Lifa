@@ -9,7 +9,7 @@ with open('quizlet.txt', 'r') as file:
     page = file.read().split('\n')
 print(page)
 
-driver = webdriver.Firefox(executable_path=r'C:\\Users\\Chan\\Desktop\\Python\\Gen\\SelDrivers\\geckodriver.exe')
+driver = webdriver.Firefox(executable_path=r'PATH\\TO\\geckodriver.exe')
 
 driver.get('https://quizlet.com/live')
 driver.find_element_by_class_name('UIInput-input').send_keys(joincode)
